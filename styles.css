@@ -43,6 +43,10 @@ h1 {
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.1);
 }
 
+.br-media-query {
+  display: none;
+}
+
 .blue-div span {
   font-weight: 500;
 }
@@ -50,16 +54,17 @@ h1 {
   margin: auto;
 }
 
-.sign-up-container {
+.form {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  max-width: 500px;
   background-color: white;
   border-radius: 8px;
-    border: 0px solid black;
+  border: 0px solid black;
   color: hsl(249, 10%, 26%);
   padding: 24px 0;
-   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.1);
+  padding: 16px 24px;
 }
 
 .selector {
@@ -68,10 +73,10 @@ h1 {
 }
 
 input {
-   height: 50px;
-  width: 75%;
-  padding: 12px 20px;
-  margin: 12px auto;
+  height: 50px;
+  width: 100%;
+  padding-left: 16px;
+  margin: 16px auto;
   box-sizing: border-box;
   border-radius: 4px;
   border: .5px solid hsl(246, 25%, 77%);
@@ -89,14 +94,23 @@ input:focus {
 
 .form-control small {
   position: absolute;
-  background-color: lightblue;
-  right: 100px;
-  bottom: 0;
+  right: 0;
+  bottom: -5px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.form-control.error input[type="text"],
+.form-control.error input[type="email"] {
+  background-image: url('./images/icon-error.svg');
+  background-repeat: no-repeat;
+  color: hsl(0, 100%, 74%);
+  background-position: right 20px top 50%;
 }
 
 button {
-  width: 375px;
-  margin: 0 auto;
+  width: 100%;
+  margin-top: 18px;
   height: 50px;
   border-radius: 5px;
   background-color: hsl(154, 59%, 51%);
@@ -115,13 +129,13 @@ button:active{
   border: none;
 }
 
-.sign-up-container p {
+.form p {
   font-size: 10px;
   text-align: center;
   color: hsl(246, 25%, 77%);
 }
 
-.sign-up-container span {
+.form span {
   color: hsl(0, 100%, 74%)
 }
 
@@ -134,8 +148,8 @@ button:active{
     align-items: center;
     max-width: 100%;
     text-align: center;
-    /*margin: 100px auto;*/
   }
+
   .hero-content {
     display: flex;
     flex-direction: column;
@@ -151,33 +165,28 @@ button:active{
     font-size: 2rem;
   }
 
+  .trial-information-container {
+
+  }
+
   .blue-div {
-    display: flex;
-    position: relative;
-    background-color: hsl(248, 32%, 49%);
-    font-size: 16px;
-    width: 340px;
+    width:100%;
+    font-size: 6px;
     height: 80px;
-    margin-bottom: 24px;
-    border-radius: 8px;
     box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.25) ;
 }
+
   .blue-div p {
-    margin: auto;
-    font-size: 18px;
-    padding: 0 50px;
+    font-size: 14px;
 }
 
-  .sign-up-container {
-    display: flex;
-    flex-direction: column;
-    width: 340px;
-    background-color: white;
-    border-radius: 8px;
-      border: 0px solid black;
-    color: hsl(249, 10%, 26%);
-    padding: 24px 0;
-    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.25);
+  .br-media-query {
+    display: initial;
+}
+
+  .form {
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .sign-up-container p {
@@ -187,9 +196,6 @@ button:active{
     padding: 0 40px;
   }
 
-  button {
-    width: 75%;
-  }
 }
 
 .attribution { font-size: 11px; text-align: center; }
